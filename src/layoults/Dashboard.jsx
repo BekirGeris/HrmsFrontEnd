@@ -10,7 +10,7 @@ import Categories from './Categories'
 export default function Dashboard() {
 
     return (
-        <div>
+        <div> 
             <Grid>
                 <Grid.Row>
                     <Grid.Column width={4}>
