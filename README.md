@@ -1,3 +1,7 @@
+# Front-End Diyagram
+
+![](https://github.com/BekirGeris/HrmsFrontEnd/blob/master/FrontEnd%20Diyagram.png?raw=true)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
