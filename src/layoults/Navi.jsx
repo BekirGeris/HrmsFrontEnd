@@ -5,7 +5,7 @@ import Search from './Search'
 export default function Navi() {
     return (
         <div>
-            <Menu inverted size='large'>
+            <Menu inverted size='large' fixed="top">
                 <Menu.Item name='home' />
                 <Menu.Item name='messages' />
 
