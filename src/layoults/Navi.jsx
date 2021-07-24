@@ -1,11 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Container, Dropdown, Menu } from 'semantic-ui-react'
 import Search from './Search'
+import SignedOut from './SignedOut'
+import SignedIn from './SignedIn'
+import { useHistory } from 'react-router-dom'
 
 export default function Navi() {
+
+    const [isAuthenticaten, setIsAuthenticaten] = useState(true)
+
+    const history = useHistory()
+
+    function handleSignOut() {
+        setIsAuthenticaten(false)
+        history.push("/")
+    }
+
+    function handleSignIn() {
+        setIsAuthenticaten(true)
+    }
+
     return (
         <div>
-            <Menu inverted size='large' fixed="top">
+            <Menu inverted size='mini' fixed="top">
                 <Menu.Item name='home' />
                 <Menu.Item name='messages' />
 
@@ -22,7 +39,7 @@ export default function Navi() {
                         </Dropdown.Menu>
                     </Dropdown>
                     <Menu.Item>
-                        <Button primary>Sign Up</Button>
+                        {isAuthenticaten ? <SignedIn signOut={handleSignOut} /> : <SignedOut signIn={handleSignIn} />}
                     </Menu.Item>
                 </Menu.Menu>
             </Menu>
