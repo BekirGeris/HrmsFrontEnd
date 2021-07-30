@@ -38,9 +38,9 @@ export default function JobAdvertisementList() {
                             <Table.Cell>{jobAdvertisement.numberOfOpenPositions}</Table.Cell>
                             <Table.Cell>{jobAdvertisement.applicationDeadline}</Table.Cell>
                             <Table.Cell>{jobAdvertisement.listingDate}</Table.Cell>
-                            <Table.Cell>{jobAdvertisement.jobPositions.jobName}</Table.Cell>
-                            <Table.Cell>{jobAdvertisement.employerUser.companyName}</Table.Cell>
-                            <Table.Cell>{jobAdvertisement.city.cityName}</Table.Cell>
+                            <Table.Cell>{jobAdvertisement.jobPositions}</Table.Cell>
+                            <Table.Cell>{jobAdvertisement.employerUser}</Table.Cell>
+                            <Table.Cell>{jobAdvertisement.city}</Table.Cell>
                         </Table.Row>
                     ))
                 }
