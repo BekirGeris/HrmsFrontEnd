@@ -57,15 +57,12 @@ export default function JobAdvertisementAdd() {
             .required("Gerekli"),
         lastApplicationDate: Yup.date()
             .min(new Date(), "Bu tarih seçilemez")
-            .required("Gerekli"),
+            .required("Gerekli")
     });
 
     const onSubmit = values => {
         let jobAdvertisementService = new JobAdvertisementService();
         let data = {
-            employerUser: {
-                id: 1
-            },
             jobPositions: values.jobPosition,
             jobDescription: values.jobDescription,
             fullTime: values.jobTime,
