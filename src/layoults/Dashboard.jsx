@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import { Grid } from 'semantic-ui-react'
+import { Grid, GridColumn } from 'semantic-ui-react'
 import CvAdd from '../pages/CV/CvAdd'
 import CvList from '../pages/CV/CvList'
 import EmployerList from '../pages/Employer/EmployerList'
@@ -18,7 +18,7 @@ export default function Dashboard() {
             <Grid>
                 <Grid.Row>
                     <Grid.Column width={4}>
-                       <Categories/>
+                       
                     </Grid.Column>
                     <Grid.Column width={12}>
                         <Route exact path="/" component={Home}/>
@@ -32,6 +32,9 @@ export default function Dashboard() {
                         <Route exact path="/CvAdd" component={CvAdd}/>
                     </Grid.Column>
                 </Grid.Row>
+                <GridColumn color="black" width={16}>
+
+                </GridColumn>
             </Grid>
         </div>
     )
